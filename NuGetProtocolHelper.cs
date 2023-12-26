@@ -1,11 +1,17 @@
-﻿using NuGet.Common;
-using NuGet.Protocol;
-using NuGet.Protocol.Core.Types;
-
-namespace SunamoNuGetProtocol;
+﻿namespace SunamoNuGetProtocol;
 //
 public class NuGetProtocolHelper
 {
+    /// <summary>
+    /// trochu nefunguje
+    /// 
+    /// dnes jsem pushoval 3 nové packages, přesto mi to vrací stále 20
+    /// nuget search vracelo taky 20
+    /// 
+    /// řešení je volat dotnet nuget locals --clear all neboli dnlc před tím
+    /// </summary>
+    /// <param name="query"></param>
+    /// <returns></returns>
     public static async Task<List<IPackageSearchMetadata>> SearchNugetPackages(string query)
     {
         ILogger logger = NullLogger.Instance;
@@ -19,7 +25,7 @@ public class NuGetProtocolHelper
             query,
             searchFilter,
             skip: 0,
-            take: int.MaxValue,
+            take: 30,
             logger,
             cancellationToken);
 
