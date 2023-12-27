@@ -1,14 +1,14 @@
-﻿namespace SunamoNuGetProtocol;
+namespace SunamoNuGetProtocol;
 
 //
 public class NuGetProtocolHelper
 {
     /// <summary>
     /// trochu nefunguje
-    /// 
+    ///
     /// dnes jsem pushoval 3 nové packages, přesto mi to vrací stále 20
     /// nuget search vracelo taky 20
-    /// 
+    ///
     /// řešení je volat dotnet nuget locals --clear all neboli dnlc před tím
     /// </summary>
     /// <param name="query"></param>
@@ -23,12 +23,12 @@ public class NuGetProtocolHelper
         SearchFilter searchFilter = new SearchFilter(includePrerelease: true);
 
         IEnumerable<IPackageSearchMetadata> results = await resource.SearchAsync(
-            query,
-            searchFilter,
-            skip: 0,
-            take: 30,
-            logger,
-            cancellationToken);
+        query,
+        searchFilter,
+        skip: 0,
+        take: 30,
+        logger,
+        cancellationToken);
 
         return results.ToList();
     }
