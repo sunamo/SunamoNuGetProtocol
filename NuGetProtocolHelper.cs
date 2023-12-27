@@ -1,4 +1,5 @@
 ﻿namespace SunamoNuGetProtocol;
+
 //
 public class NuGetProtocolHelper
 {
