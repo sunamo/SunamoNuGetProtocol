@@ -1,0 +1,14 @@
+NuGetProtocolHelper
+Task
+IPackageSearchMetadata
+ILogger
+NullLogger
+Instance
+CancellationToken
+None
+SourceRepository
+Repository
+Factory
+PackageSearchResource
+GetResourceAsync
+IEnumerable
