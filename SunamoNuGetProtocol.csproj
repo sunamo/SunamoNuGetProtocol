@@ -19,6 +19,9 @@
     <Compile Include="..\SunamoExceptions\OnlyInSE\ThrowEx.cs" Link="_linked\SunamoExceptions\OnlyInSE\ThrowEx.cs" />
     <Compile Include="..\SunamoExceptions\OnlyInSE\Exc.cs" Link="_linked\SunamoExceptions\OnlyInSE\Exc.cs" />
     <Compile Include="..\SunamoXlfKeys\XlfKeys.cs" Link="_linked\SunamoXlfKeys\XlfKeys.cs" />
+    <Compile Include="..\SunamoFubuCore\Logging\ILogger.cs" Link="_linked\SunamoFubuCore\Logging\ILogger.cs" />
+    <Compile Include="..\SunamoFubuCsProjFile\_NotMine\None.cs" Link="_linked\SunamoFubuCsProjFile\_NotMine\None.cs" />
+    <Compile Include="..\SunamoDevCode\Enums\Repository.cs" Link="_linked\SunamoDevCode\Enums\Repository.cs" />
   </ItemGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DefineConstants>$(DefineConstants);ASYNC;SunamoNuGetProtocol</DefineConstants>
