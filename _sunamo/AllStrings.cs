@@ -1,3 +1,5 @@
+
+namespace SunamoNuGetProtocol;
 public class AllStrings
 {
     public const string dot = ".";

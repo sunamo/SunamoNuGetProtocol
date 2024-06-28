@@ -1,3 +1,5 @@
+
+namespace SunamoNuGetProtocol;
 public class AllChars
 {
     public static List<char> vsZnakyWithoutSpecial;

@@ -1,3 +1,5 @@
+
+namespace SunamoNuGetProtocol;
 using System.Diagnostics;
 using System.Text;
 
