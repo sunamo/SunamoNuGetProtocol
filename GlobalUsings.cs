@@ -18,3 +18,5 @@ global using SunamoNuGetProtocol._sunamo.SunamoValues;
 global using SunamoNuGetProtocol._sunamo.SunamoXlfKeys;
 global using SunamoNuGetProtocol._sunamo.SunamoExceptions.OnlyInSE;
 global using SunamoNuGetProtocol._sunamo.SunamoExceptions._AddedToAllCsproj;
+global using System.Diagnostics;
+global using System.Net;
