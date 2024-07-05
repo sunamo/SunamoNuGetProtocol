@@ -1,4 +1,4 @@
-namespace SunamoNuGetProtocol;
+namespace SunamoNuGetProtocol._sunamo.SunamoStringGetLines;
 internal class SHGetLines
 {
     internal static List<string> GetLines(string p)

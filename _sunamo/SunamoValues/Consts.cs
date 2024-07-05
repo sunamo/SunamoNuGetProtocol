@@ -1,4 +1,4 @@
-namespace SunamoNuGetProtocol;
+namespace SunamoNuGetProtocol._sunamo.SunamoValues;
 
 
 
