@@ -11,14 +11,16 @@
     <RepositoryUrl>https://github.com/sunamo/SunamoNuGetProtocol.git</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageReadmeFile>readme.md</PackageReadmeFile>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="NuGet.Protocol" Version="6.10.1" />
+    <None Include="readme.md" Pack="True" PackagePath="." />
   </ItemGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DefineConstants>$(DefineConstants);ASYNC;SunamoNuGetProtocol</DefineConstants>
+    <DefineConstants>$(DefineConstants);ASYNC;SunamoNuGetProtocol;SunamoNuGetProtocol.csproj</DefineConstants>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <DefineConstants>$(DefineConstants);ASYNC;SunamoNuGetProtocol</DefineConstants>
+    <DefineConstants>$(DefineConstants);ASYNC;SunamoNuGetProtocol;SunamoNuGetProtocol.csproj</DefineConstants>
   </PropertyGroup>
 </Project>
