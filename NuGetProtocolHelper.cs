@@ -9,7 +9,7 @@ public class NuGetProtocolHelper
     ///     trochu nefunguje
     ///     dnes jsem pushoval 3 nové packages, přesto mi to vrací stále 20
     ///     nuget search vracelo taky 20
-    ///     řešení je volat dotnet nuget locals --clear all neboli dnlc před tím
+    ///     řešení je volat dot_net nuget locals --clear all neboli dnlc před tím
     /// </summary>
     /// <param name="query"></param>
     /// <returns></returns>
