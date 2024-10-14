@@ -12,6 +12,6 @@ global using System;
 global using System.Diagnostics.CodeAnalysis;
 global using System.Reflection;
 global using SunamoNuGetProtocol._sunamo.SunamoValues;
-global using SunamoNuGetProtocol._sunamo.SunamoExceptions.OnlyInSE;
+global using SunamoNuGetProtocol._sunamo.SunamoExceptions;
 global using System.Diagnostics;
 global using System.Net;
