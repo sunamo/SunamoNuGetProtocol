@@ -1,6 +1,5 @@
-using NuGet.Versioning;
-
 namespace SunamoNuGetProtocol;
+using NuGet.Versioning;
 
 //
 public class NuGetProtocolHelper
