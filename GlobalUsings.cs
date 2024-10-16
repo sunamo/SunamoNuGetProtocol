@@ -9,7 +9,7 @@ global using System.Text;
 global using System.Collections;
 global using System.IO;
 global using System;
-global using SunamoNuGetProtocol._sunamo.SunamoValues;
+global using SunamoNuGetProtocol;
 global using SunamoNuGetProtocol._sunamo.SunamoExceptions;
 global using System.Diagnostics;
 global using System.Diagnostics.CodeAnalysis;
