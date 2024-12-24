@@ -15,10 +15,10 @@ internal class FS
         {
             return;
         }
-        List<string> slozkyKVytvoreni = new List<string>
-{
+        List<string> slozkyKVytvoreni =
+[
 nad
-};
+];
         while (true)
         {
             nad = Path.GetDirectoryName(nad);
