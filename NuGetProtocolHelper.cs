@@ -1,6 +1,4 @@
 namespace SunamoNuGetProtocol;
-using NuGet.Versioning;
-
 //
 public class NuGetProtocolHelper
 {
@@ -14,13 +12,11 @@ public class NuGetProtocolHelper
     /// <returns></returns>
     public static async Task<List<IPackageSearchMetadata>> SearchNugetPackages(string query)
     {
-        var logger = NullLogger.Instance;
+        var logger = NuGet.Common.NullLogger.Instance;
         var cancellationToken = CancellationToken.None;
-
         var repository = Repository.Factory.GetCoreV3("https://api.nuget.org/v3/index.json");
         var resource = await repository.GetResourceAsync<PackageSearchResource>();
         var searchFilter = new SearchFilter(true);
-
         IEnumerable<IPackageSearchMetadata> results = await resource.SearchAsync(
             query,
             searchFilter,
@@ -29,20 +25,16 @@ public class NuGetProtocolHelper
             1000,
             logger,
             cancellationToken);
-
         return results.ToList();
     }
-
     public static async Task<IEnumerable< /*NuGet.Protocol.Core.VersionInfo*/ NuGetVersion>> GetPackageVersions(
         string packageId)
     {
-        var logger = NullLogger.Instance;
+        var logger = NuGet.Common.NullLogger.Instance;
         var cancellationToken = CancellationToken.None;
-
         var cache = new SourceCacheContext();
         var repository = Repository.Factory.GetCoreV3("https://api.nuget.org/v3/index.json");
         var resource = await repository.GetResourceAsync<FindPackageByIdResource>(cancellationToken);
-
         return await resource.GetAllVersionsAsync(packageId, cache, logger, cancellationToken);
     }
 }

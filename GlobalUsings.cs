@@ -16,3 +16,8 @@ global using System.Net;
 global using System.Diagnostics.CodeAnalysis;
 global using SunamoNuGetProtocol;
 global using SunamoNuGetProtocol._sunamo;
+
+global using NuGet.Versioning;
+global using ILogger = Microsoft.Extensions.Logging.ILogger;
+global using Microsoft.Extensions.Logging;
+global using NullLogger = Microsoft.Extensions.Logging.Abstractions.NullLogger;
