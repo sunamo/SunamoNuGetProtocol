@@ -1,15 +1,15 @@
-namespace RunnerNuGetProtocol;
-
 using SunamoNuGetProtocol.Tests;
+
+namespace RunnerNuGetProtocol;
 
 internal class Program
 {
     static void Main()
     {
-        MainAsync().GetAwaiter().GetResult();
+        MainAsync(args).GetAwaiter().GetResult();
     }
 
-    static async Task MainAsync()
+    static async Task MainAsync(string[] args)
     {
         NuGetProtocolHelperTests t = new NuGetProtocolHelperTests();
         await t.GetPackageVersionsTests();
