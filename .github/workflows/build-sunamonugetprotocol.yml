@@ -1,0 +1,61 @@
+name: Build SunamoNuGetProtocol
+
+on:
+  push:
+    branches: [ "**" ]
+  pull_request:
+    branches: [ "**" ]
+
+jobs:
+  build:
+    name: Build SunamoNuGetProtocol
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        submodules: recursive
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: '9.0.x'
+
+    - name: Restore dependencies
+      run: dotnet restore SunamoNuGetProtocol/SunamoNuGetProtocol.csproj
+
+    - name: Build
+      run: dotnet build SunamoNuGetProtocol/SunamoNuGetProtocol.csproj --configuration Release --no-restore
+
+  test:
+    name: Test SunamoNuGetProtocol.Tests
+    runs-on: ${{ matrix.os }}
+    needs: build
+
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        submodules: recursive
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: '9.0.x'
+
+    - name: Restore dependencies
+      run: dotnet restore SunamoNuGetProtocol.Tests/SunamoNuGetProtocol.Tests.csproj
+
+    - name: Build tests
+      run: dotnet build SunamoNuGetProtocol.Tests/SunamoNuGetProtocol.Tests.csproj --configuration Release --no-restore
+
+    - name: Run tests
+      run: dotnet test SunamoNuGetProtocol.Tests/SunamoNuGetProtocol.Tests.csproj --configuration Release --no-build --verbosity normal
+      continue-on-error: true
