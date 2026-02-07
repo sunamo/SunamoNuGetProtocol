@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="SunamoNuGetProtocol.Tests\\SunamoNuGetProtocol.Tests.csproj" />
+  <Project Path="RunnerNuGetProtocol\\RunnerNuGetProtocol.csproj" />
+  <Project Path="SunamoNuGetProtocol\SunamoNuGetProtocol.csproj" />
+</Solution>
