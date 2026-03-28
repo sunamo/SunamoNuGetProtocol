@@ -1,20 +1,20 @@
 ### SunamoNuGetProtocol
 
-Part of PlatformIndependentNuGetPackages:
+A wrapper around the NuGet.Protocol package providing simplified methods for searching NuGet packages and retrieving package versions via the NuGet V3 API.
+
+#### Key Methods
+
+- `SearchNugetPackages(string query)` - Searches for NuGet packages matching a query string.
+- `GetPackageVersions(string packageId)` - Retrieves all available versions of a specified NuGet package.
+
+#### Links
 
 - [nuget.org](https://www.nuget.org/profiles/sunamo)
-- [github.org](https://github.com/sunamo/PlatformIndependentNuGetPackages)
-
-Another links:
-
+- [GitHub](https://github.com/sunamo/PlatformIndependentNuGetPackages)
 - [Developer site](https://sunamo.cz)
 
 Request for new features / bug report / etc: [Mail](mailto:radek.jancik@sunamo.cz) or on GitHub
-## Target Frameworks
+
+#### Target Frameworks
 
 **TargetFrameworks:** `net10.0;net9.0;net8.0`
-
-**Reason:** Code uses C# 12.0 features (collection expressions, primary constructors) or dependencies requiring .NET 8.0+:
-- Collection expressions `[]` syntax requires C# 12.0 (net8.0+)
-- Primary constructors require C# 12.0 (net8.0+) 
-- Entity Framework Core 9.x requires net8.0+

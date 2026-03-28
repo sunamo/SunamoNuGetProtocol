@@ -2,6 +2,9 @@ using SunamoNuGetProtocol.Tests;
 
 namespace RunnerNuGetProtocol;
 
+/// <summary>
+/// Entry point for running NuGetProtocol tests outside of the test framework.
+/// </summary>
 internal class Program
 {
     static void Main(string[] args)

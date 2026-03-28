@@ -1,13 +1,19 @@
-// EN: Variable names have been checked and replaced with self-descriptive names
-// CZ: Názvy proměnných byly zkontrolovány a nahrazeny samopopisnými názvy
-
 namespace SunamoNuGetProtocol.Tests;
 
+/// <summary>
+/// Tests for <see cref="NuGetProtocolHelper"/>.
+/// </summary>
 public class NuGetProtocolHelperTests
 {
+    /// <summary>
+    /// Verifies that GetPackageVersions returns at least one version for an existing package.
+    /// </summary>
     [Fact]
     public async Task GetPackageVersionsTests()
     {
-        var data = await NuGetProtocolHelper.GetPackageVersions("SunamoExtensions");
+        var versions = await NuGetProtocolHelper.GetPackageVersions("SunamoExtensions");
+
+        Assert.NotNull(versions);
+        Assert.NotEmpty(versions);
     }
 }
