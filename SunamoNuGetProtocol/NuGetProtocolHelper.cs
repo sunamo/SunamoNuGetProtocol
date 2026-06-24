@@ -1,16 +1,8 @@
 namespace SunamoNuGetProtocol;
 
-/// <summary>
-/// Provides helper methods for interacting with the NuGet V3 protocol API.
-/// </summary>
 public class NuGetProtocolHelper
 {
-    /// <summary>
-    /// Searches for NuGet packages matching the specified query.
-    /// Note: NuGet API may cache results. Run "dotnet nuget locals --clear all" to clear the cache before searching.
-    /// </summary>
-    /// <param name="query">The search query string to find NuGet packages.</param>
-    /// <returns>A list of package search metadata matching the query.</returns>
+    // Note: NuGet API may cache results. Run "dotnet nuget locals --clear all" to clear the cache before searching.
     public static async Task<List<IPackageSearchMetadata>> SearchNugetPackages(string query)
     {
         var nugetLogger = NuGet.Common.NullLogger.Instance;
@@ -28,13 +20,7 @@ public class NuGetProtocolHelper
         return results.ToList();
     }
 
-    /// <summary>
-    /// Retrieves all available versions of a specified NuGet package.
-    /// </summary>
-    /// <param name="packageId">The unique identifier of the NuGet package.</param>
-    /// <returns>An enumerable of all available NuGet versions for the specified package.</returns>
-    public static async Task<IEnumerable<NuGetVersion>> GetPackageVersions(
-        string packageId)
+    public static async Task<IEnumerable<NuGetVersion>> GetPackageVersions(string packageId)
     {
         var nugetLogger = NuGet.Common.NullLogger.Instance;
         var cancellationToken = CancellationToken.None;
