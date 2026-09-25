@@ -14,7 +14,7 @@ internal class Program
 
     static async Task MainAsync(string[] args)
     {
-        NuGetProtocolHelperTests t = new NuGetProtocolHelperTests();
+        NuGetProtocolHelperTests t = new();
         await t.GetPackageVersionsTests();
     }
 }

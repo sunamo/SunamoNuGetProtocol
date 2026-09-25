@@ -33,8 +33,7 @@ public class NuGetProtocolHelper
     /// </summary>
     /// <param name="packageId">The unique identifier of the NuGet package.</param>
     /// <returns>An enumerable of all available NuGet versions for the specified package.</returns>
-    public static async Task<IEnumerable<NuGetVersion>> GetPackageVersions(
-        string packageId)
+    public static async Task<IEnumerable<NuGetVersion>> GetPackageVersions(string packageId)
     {
         var nugetLogger = NuGet.Common.NullLogger.Instance;
         var cancellationToken = CancellationToken.None;
