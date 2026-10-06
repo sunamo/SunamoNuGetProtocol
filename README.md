@@ -1,5 +1,10 @@
 # SunamoNuGetProtocol
 
+## Short description
+
+Obálka nad balíčkem NuGet.Protocol pro dotazování na balíčky a jejich verze v NuGetu. Obsahuje Runner a testy.
+
+
 Wrapper around NuGet.Protocol package
 
 ## Overview
