@@ -1,8 +1,16 @@
 namespace SunamoNuGetProtocol;
 
+/// <summary>
+/// Represents the nu get protocol helper type.
+/// </summary>
 public class NuGetProtocolHelper
 {
     // Note: NuGet API may cache results. Run "dotnet nuget locals --clear all" to clear the cache before searching.
+    /// <summary>
+    /// Search nuget packages.
+    /// </summary>
+    /// <param name="query">The query.</param>
+    /// <returns>The search nuget packages result.</returns>
     public static async Task<List<IPackageSearchMetadata>> SearchNugetPackages(string query)
     {
         var nugetLogger = NuGet.Common.NullLogger.Instance;
